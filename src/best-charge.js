@@ -92,12 +92,12 @@ ${promotionString}
 //生成订单字符串
 buildOrderDetailString=(foodList,promotionString,TotalMoney)=>{
   let foodListString = foodList.reduce((result,item)=>result + `\n${item.foodItemInfo.name} x ${item.foodNum} = ${item.subPrice}元`,'') 
-  let orderInfo = `
+  return `
 ============= 订餐明细 =============${foodListString}
 -----------------------------------${promotionString}
 总计：${TotalMoney}元
 ===================================`
-  return orderInfo;
+   
 }
 
 //输出订单信息
